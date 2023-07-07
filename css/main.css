@@ -15,7 +15,11 @@ html {
 	background-color: #999B9B;
 	color: #fff;
 }
-
+.counter-wrap {
+	display: flex;
+	align-items: baseline;
+  }
+  
 ::-moz-selection {
 	background-color: #FF6600;
 	color: #fff;
