@@ -427,7 +427,7 @@ function initGoogleMap() {
 				lat = data[0].geometry.location.lat();
 				lng = data[0].geometry.location.lng();
 
-				var center = new google.maps.LatLng(lat, lng);
+				
 				var ottawaCoordinates = { lat: 45.4215, lng: -75.69 }; // Coordinates for Ottawa
 
 				var ottawaBounds = {
@@ -439,7 +439,7 @@ function initGoogleMap() {
 				
 				var settings = {
 				  mapTypeId: google.maps.MapTypeId.ROADMAP,
-				  zoom: 5,
+				  zoom: 12,
 				  draggable: true, // Disable dragging of the map
 				  center: ottawaCoordinates, // Set Ottawa coordinates as the center
 				  styles: styles,
@@ -447,7 +447,7 @@ function initGoogleMap() {
 				  gestureHandling: 'greedy', // Disable all user interactions
 				  restriction: {
 					latLngBounds: ottawaBounds, // Set the map boundaries to Ottawa limits
-					strictBounds: true
+					strictBounds: false
 				  }
 				};
 				  
