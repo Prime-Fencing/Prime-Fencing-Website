@@ -498,7 +498,8 @@ function initGoogleMap() {
 var legend = document.createElement('div');
 legend.id = 'legend';
 legend.style.backgroundColor = '#f5f5f5';
-legend.style.marginLeft = '50px';
+legend.style.marginTop = '10px'; // Adjust the top margin to position the legend
+legend.style.marginLeft = '10px'; // Adjust the left margin to position the legend
 legend.style.padding = '10px';
 legend.style.border = '1px solid #e0e0e0';
 legend.style.borderRadius = '5px';
@@ -506,7 +507,6 @@ legend.style.fontFamily = 'Helvetica, Arial, sans-serif';
 legend.style.fontSize = '14px';
 legend.style.color = '#555';
 legend.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
-
 
 var legendContent = "<h3 style='margin-top: 0;'>Legend</h3>" +
   "<div style='display: flex; align-items: center; margin-bottom: 5px;'>" +
@@ -531,29 +531,14 @@ var legendContent = "<h3 style='margin-top: 0;'>Legend</h3>" +
 legend.innerHTML = legendContent;
 
 
-var legendmarkerimage = document.createElement('img');
-legendmarkerimage.src = 'legend.png';
-legendmarkerimage.className = 'border-icon rounded-icon';
-legendmarkerimage.style.position = 'absolute';
-legendmarkerimage.style.top = '0';
-legendmarkerimage.style.left = '0';
-legendmarkerimage.style.cursor = 'pointer';
 
 
 
 
 
 
+legend.style.display = 'block';
 
-legend.style.display = 'none';
-
-legendmarkerimage.addEventListener('click', function() {
-  if (legend.style.display === 'block') {
-    legend.style.display = 'none';
-  } else {
-    legend.style.display = 'block';
-  }
-});
 
 
 
@@ -562,7 +547,7 @@ legendmarkerimage.addEventListener('click', function() {
 var legendContainer = document.createElement('div');
 legendContainer.className = 'legend-container';
 legendContainer.appendChild(legend);
-legendContainer.appendChild(legendmarkerimage);
+
 map.controls[google.maps.ControlPosition.TOP_LEFT].push(legendContainer);
 
 
