@@ -1,0 +1,3 @@
+[build]
+  command = "gulp build"  # Adjust the build command as per your project's build process
+  publish = "dist"  # Specify the directory containing the build output
